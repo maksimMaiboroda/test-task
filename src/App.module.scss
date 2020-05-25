@@ -1,0 +1,33 @@
+.wrapperApp {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.leftContentPage {
+  width: 65%;
+}
+
+.rightContentPage {
+  width: 35%;
+  background-color: #f8f8f8;
+}
+
+@media (max-width: 1380px) {
+  .rightContentPage {
+    display: none;
+  }
+
+  .leftContentPage {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 380px) {
+  .jokePageContainer {
+    padding: 0 20px;
+  }
+}

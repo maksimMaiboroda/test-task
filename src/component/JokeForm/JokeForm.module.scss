@@ -1,0 +1,140 @@
+/* random checkbox */
+
+.jokeForm {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 26px;
+  color: #333333;
+}
+
+.randomOrNot {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.randomLabel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 13px;
+}
+
+.randomCheckbox {
+  display: none;
+}
+
+.searchInput {
+  border: 2px solid #333333;
+  border-radius: 10px;
+  width: 100%;
+  height: 42px;
+  padding: 0 15px;
+  outline: none;
+  background: none;
+}
+
+#searchCheckbox:checked ~ #searchInputCheckbox {
+  background: red;
+  border-radius: 100px;
+}
+
+.fakeRandom {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #ababab;
+  box-sizing: border-box;
+  margin-right: 15px;
+  position: relative;
+}
+
+.fakeRandom::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: #333;
+  border-radius: 50%;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.randomCheckbox:checked + .fakeRandom::before {
+  opacity: 1;
+
+  .fakeRandom {
+    border: 2px solid #333;
+  }
+}
+
+.randomCheckbox:checked + .fakeRandom {
+  border: 2px solid #333;
+  transition: border 0.2s;
+}
+
+/* categories checkbox */
+
+.categories {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.categoriesWrapp {
+  margin-bottom: 20px;
+}
+
+.categoriesCheckbox {
+  display: none;
+}
+
+.categoriesText {
+  padding: 6px 15px;
+  margin-right: 10px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ababab;
+
+  border: 2px solid #f8f8f8;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+
+.categoriesCheckbox:checked + .categoriesText {
+  color: #333333;
+  background-color: #f8f8f8;
+}
+
+/* submit */
+
+.btnFormSubmit {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ffffff;
+  cursor: pointer;
+
+  width: 152px;
+  height: 42px;
+
+  background: linear-gradient(92.01deg, #8ea7ff 0%, #7291ff 100%);
+  border-radius: 10px;
+  border: none;
+  outline: none;
+
+  margin-bottom: 40px;
+}

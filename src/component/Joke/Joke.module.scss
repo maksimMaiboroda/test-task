@@ -1,0 +1,139 @@
+.jokeWrapper {
+  margin-bottom: 20px;
+}
+
+.jokeContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.jokeIcon {
+  padding-right: 20px;
+
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    border-radius: 50%;
+  }
+}
+
+.jokeContent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.btnColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.btnLike {
+  color: #ff6767;
+}
+
+.jokeHead {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.idLinkToJoke {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 14px;
+  color: #ababab;
+}
+
+.idLinkIcon {
+  color: #8ea7ff;
+
+  a {
+    color: #8ea7ff;
+  }
+}
+
+.jokeText {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 26px;
+}
+
+.jokeFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.timeFromUpdated {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 14px;
+  color: #ababab;
+}
+
+.btnCelebrity {
+  padding: 6px 20px;
+  border: none;
+  border-radius: 6px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 14px;
+
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  color: #333333;
+}
+
+.btnCelebrityMobileWrapp {
+  display: none;
+}
+.btnCelebrityMobile {
+  padding: 6px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 6px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 14px;
+
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  color: #333333;
+}
+
+@media (max-width: 840px) {
+  .jokeContainer {
+    padding: 0px;
+  }
+}
+
+@media (max-width: 440px) {
+  .btnCelebrity {
+    display: none;
+  }
+
+  .btnCelebrityMobileWrapp {
+    display: block;
+  }
+}
