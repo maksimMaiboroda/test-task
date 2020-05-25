@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/test-task/static/css/main.1a1cdee3.chunk.css",
+    "main.js": "/test-task/static/js/main.8dd3a2a6.chunk.js",
+    "main.js.map": "/test-task/static/js/main.8dd3a2a6.chunk.js.map",
+    "runtime-main.js": "/test-task/static/js/runtime-main.9750f0fd.js",
+    "runtime-main.js.map": "/test-task/static/js/runtime-main.9750f0fd.js.map",
+    "static/js/2.b771e4ef.chunk.js": "/test-task/static/js/2.b771e4ef.chunk.js",
+    "static/js/2.b771e4ef.chunk.js.map": "/test-task/static/js/2.b771e4ef.chunk.js.map",
+    "index.html": "/test-task/index.html",
+    "precache-manifest.ac2d3c36a0cadf3f5a8a8dd6a3c72d38.js": "/test-task/precache-manifest.ac2d3c36a0cadf3f5a8a8dd6a3c72d38.js",
+    "service-worker.js": "/test-task/service-worker.js",
+    "static/css/main.1a1cdee3.chunk.css.map": "/test-task/static/css/main.1a1cdee3.chunk.css.map",
+    "static/js/2.b771e4ef.chunk.js.LICENSE.txt": "/test-task/static/js/2.b771e4ef.chunk.js.LICENSE.txt",
+    "static/media/jokeIconStatic.svg": "/test-task/static/media/jokeIconStatic.71773f6e.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9750f0fd.js",
+    "static/js/2.b771e4ef.chunk.js",
+    "static/css/main.1a1cdee3.chunk.css",
+    "static/js/main.8dd3a2a6.chunk.js"
+  ]
+}
