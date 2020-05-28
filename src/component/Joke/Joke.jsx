@@ -3,6 +3,8 @@ import clases from "./Joke.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExternalLinkAlt, faHeart } from "@fortawesome/free-solid-svg-icons";
 import jokeIconStatic from "../../assets/img/jokeIconStatic.svg";
+/* import heart from "../../assets/img/jokeIconStatic.svg";
+import heartTransparent from "../../assets/img/jokeIconStatic.svg"; */
 
 const JokeComponent = ({
   joke,
@@ -10,6 +12,7 @@ const JokeComponent = ({
   toFovourites,
   backgroundColorText,
   backgroundColor,
+  heartIcon,
 }) => {
   return (
     <div className={clases.jokeWrapper}>
@@ -54,11 +57,18 @@ const JokeComponent = ({
         </div>
 
         <div className={clases.btnColumn}>
-          <FontAwesomeIcon
+          <span
+            className={clases.btnLike}
+            onClick={toFovourites.bind(this, joke.id)}
+          >
+            <img src={heartIcon} alt="" />
+          </span>
+
+          {/*  <FontAwesomeIcon
             className={clases.btnLike}
             icon={faHeart}
             onClick={toFovourites.bind(this, joke.id)}
-          />
+          /> */}
           <button
             style={{ backgroundColor: `${backgroundColor}` }}
             className={clases.btnCelebrity}

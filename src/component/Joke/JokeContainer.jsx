@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import Joke from "./Joke";
 import { toFovourites } from "../../redux/actions/actions";
+import heartTransparent from "../../assets/img/heartTransparent.svg";
 
 class JokeContainer extends React.Component {
   componentDidMount() {
@@ -10,7 +11,7 @@ class JokeContainer extends React.Component {
 
   render() {
     return this.props.jokeData.map((joke) => {
-      return <Joke {...this.props} joke={joke} key={joke.id} />;
+      return <Joke {...this.props} joke={joke} key={joke.id} heartIcon={heartTransparent} />;
     });
   }
 }
