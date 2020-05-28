@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import {
   getJokeRandom,
   getJokeCategory,
-  searchJoke /* isFormFilled, isDisabledForm */,
+  searchJoke,
 } from "../../redux/actions/actions";
 import JokeForm from "./JokeForm";
 
@@ -13,7 +13,7 @@ const JokeFormContainer = (props) => {
       props.getJokeRandom();
     } else if (categorySelection === "search") {
       console.log(`Выполнить запрос на сервер с ${search}`);
-      props.searchJoke(search)
+      props.searchJoke(search);
     } else if (caterogies === undefined || categorySelection === undefined) {
       console.log("Виберете категорию шуток!");
       console.log(search);
@@ -31,24 +31,15 @@ const JokeFormContainer = (props) => {
     }
   };
 
-  /* if (props.categorySelection === "fromCaterogies") {
-    props.isFormFilled();
-  } */
-
   return <JokeForm onSubmit={onSubmit} {...props} />;
 };
 
 let mapStateToProps = (state) => ({
   formCompleted: state.jokes.formCompleted,
-
-  /* disabledForm: state.jokes.formCompleted,
-
-  caterogies: state.form.caterogies,
-  categorySelection: state.form.categorySelection, */
 });
 
 export default connect(mapStateToProps, {
   getJokeRandom,
   getJokeCategory,
-  searchJoke /*  isFormFilled, isDisabledForm */,
+  searchJoke,
 })(JokeFormContainer);

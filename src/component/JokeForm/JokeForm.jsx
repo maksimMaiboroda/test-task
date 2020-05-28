@@ -2,14 +2,7 @@ import React from "react";
 import classes from "./JokeForm.module.scss";
 import { reduxForm, Field } from "redux-form";
 
-let JokeForm = ({ handleSubmit,/*  formCompleted, disabledForm, isDisabledForm  */}) => {
-  
-  /* if (formCompleted === true) {
-    isDisabledForm(true);
-  } else {
-    isDisabledForm(false);
-  } */
-
+let JokeForm = ({ handleSubmit }) => {
   return (
     <form onSubmit={handleSubmit} className={classes.jokeForm}>
       <div className={classes.randomOrNot}>

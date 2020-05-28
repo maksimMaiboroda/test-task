@@ -1,8 +1,7 @@
 import {
   TO_RANDOM_JOKE,
-  IS_FORM_FILLED,
-  IS_FORM_DISABLED,
   TO_FOVOURITES,
+  REMOVE_FOVOURITES,
 } from "../types/types";
 
 let initialState = {
@@ -35,16 +34,14 @@ export default (state = initialState, action) => {
         ...state,
         favouriteJoke: [...state.favouriteJoke, ...state.jokeData],
       };
-    /* case IS_FORM_FILLED:
+    case REMOVE_FOVOURITES:
       return {
         ...state,
-        formCompleted: !state.formCompleted,
+        favouriteJoke: state.favouriteJoke.filter(
+          (o) => o.id !== action.payload
+        ),
       };
-      case IS_FORM_DISABLED:
-        return {
-          ...state,
-          disabledForm: action.payload,
-        }; */
+
     default:
       return state;
   }

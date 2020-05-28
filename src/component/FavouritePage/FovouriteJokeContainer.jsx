@@ -1,25 +1,22 @@
 import React from "react";
 import { connect } from "react-redux";
 import Joke from "../Joke/Joke";
-import { toFovourites } from "../../redux/actions/actions";
+import { removeFovourites as toFovourites } from "../../redux/actions/actions";
 import classes from "./FavouritePage.module.scss";
+import uniqBy from "lodash/uniqBy";
 
-class FovouriteJokeContainer extends React.Component {
-  componentDidMount() {}
-
-  render() {
-    return this.props.favouriteJoke.map((joke) => {
-      return (
-        <div className={classes.wrapperFavouriteJoke}>
-          <Joke {...this.props} joke={joke} key={joke.id} />
-        </div>
-      );
-    });
-  }
-}
+const FovouriteJokeContainer = (props) => {
+  return props.favouriteJoke.map((joke) => {
+    return (
+      <div className={classes.wrapperFavouriteJoke}>
+        <Joke {...props} joke={joke} key={joke.id} />
+      </div>
+    );
+  });
+};
 
 let mapStateToProps = (state) => ({
-  favouriteJoke: state.jokes.favouriteJoke,
+  favouriteJoke: uniqBy(state.jokes.favouriteJoke, (o) => o.id),
 });
 
 export default connect(mapStateToProps, { toFovourites })(

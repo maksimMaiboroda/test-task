@@ -57,9 +57,12 @@ const JokeComponent = ({
           <FontAwesomeIcon
             className={clases.btnLike}
             icon={faHeart}
-            onClick={toFovourites}
+            onClick={toFovourites.bind(this, joke.id)}
           />
-          <button style={{ backgroundColor: `${backgroundColor}` }} className={clases.btnCelebrity}>
+          <button
+            style={{ backgroundColor: `${backgroundColor}` }}
+            className={clases.btnCelebrity}
+          >
             {joke.categories.length > 0 ? joke.categories : "CATEGORIES"}
           </button>
         </div>
